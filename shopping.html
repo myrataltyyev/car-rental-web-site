@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping Cart</title>
+        <link rel="stylesheet" href="shopping.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+        <script type="text/javascript" src="shopping.js"></script>
+    </head>
+    <body>
+        <nav id="navigation">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Cyprus</a></li>
+                <li><a href="shopping.html">Cart</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div id="container">
+            <h1>Shopping Cart</h1>
+            
+            <p>We are the Rental Company that is open 24 hours a day, 7 days a week. Travelling further? Save the wear and tear on your own vehicle and get a car rental for a weekend away to beach or to mountains.  Hire a saloon or economy car to drive. We have rental cars to suit any budget. So the next time you need a dependable rental car at a reasonable cost use our services.</p>
+            
+            <table>
+                <!-- 1st car -->
+                <tr>
+                    <th><h2>Image</h2></th>
+                    <th><h2>Description</h2></th>
+                    <th><h2>Days / Price per day</h2></th>
+                </tr>
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_d4_d6_opel_astra_1_6.jpg" alt="Opel Astra" />
+                    </td> 
+                    <td>
+                        <h2 class="title">OPEL ASTRA</h2>
+                        <p class="description">
+                            Color: red <br />
+                            Year: 2013 <br />
+                            Country: Germany <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay1">$20 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days1" name="days" onchange="calculatePrice1()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price1">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 2nd car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_d4_d6_toyota_corolla_1_4.jpg" alt="Toyota Corolla" />
+                    </td> 
+                    <td>
+                        <h2 class="title">TOYOTA COROLLA</h2>
+                        <p class="description">
+                            Color: white <br />
+                            Year: 2015 <br />
+                            Country: Japan <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay2">$25 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days2" name="days" onchange="calculatePrice2()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price2">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 3rd car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_h1_h4_toyota_avensis_1_6.jpg" alt="Toyota Avensis" />
+                    </td> 
+                    <td>
+                        <h2 class="title">TOYOTA AVENSIS</h2>
+                        <p class="description">
+                            Color: white <br />
+                            Year: 2015 <br />
+                            Country: Japan <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay3">$25 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days3" name="days" onchange="calculatePrice3()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price3">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 4th car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_e5_toyota_rav4_4wd_2_0.jpg" alt="Toyota rav4" />
+                    </td> 
+                    <td>
+                        <h2 class="title">TOYOTA RAV4</h2>
+                        <p class="description">
+                            Color: space grey <br />
+                            Year: 2016 <br />
+                            Country: Japan <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay4">$30 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days4" name="days" onchange="calculatePrice4()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price4">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 5th car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_v7_peugeot_expert_1_6d.jpg" alt="Peugeot Expert" />
+                    </td> 
+                    <td>
+                        <h2 class="title">PEUGEOT EXPERT</h2>
+                        <p class="description">
+                            Color: grey <br />
+                            Year: 2008 <br />
+                            Country: France <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay5">$25 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days5" name="days" onchange="calculatePrice5()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price5">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 6th car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_h6_audi_a4_1_8.jpg" alt="Audi A4" />
+                    </td> 
+                    <td>
+                        <h2 class="title">AUDI A4</h2>
+                        <p class="description">
+                            Color: grey <br />
+                            Year: 2013 <br />
+                            Country: Germany <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay6">$30 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days6" name="days" onchange="calculatePrice6()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price6">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 7th car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_h2_vw_passat_1_4.jpg" alt="Volkswagen Passat" />
+                    </td> 
+                    <td>
+                        <h2 class="title">VOLKSWAGEN PASSAT</h2>
+                        <p class="description">
+                            Color: brown <br />
+                            Year: 2015 <br />
+                            Country: Germany <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay7">$40 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days7" name="days" onchange="calculatePrice7()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price7">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 8th car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_h7_mercedes_e200_1_8.jpg" alt="Mercedes E200" />
+                    </td> 
+                    <td>
+                        <h2 class="title">MERCEDES E200</h2>
+                        <p class="description">
+                            Color: grey <br />
+                            Year: 2012 <br />
+                            Country: Germany <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay8">$50 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days8" name="days" onchange="calculatePrice8()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price8">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 9th car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_h9_bmw_730d_3_0.jpg" alt="BMW 730D" />
+                    </td> 
+                    <td>
+                        <h2 class="title">BMW 730D</h2>
+                        <p class="description">
+                            Color: dark brown <br />
+                            Year: 2013 <br />
+                            Country: Germany <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay9">$50 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days9" name="days" onchange="calculatePrice9()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price9">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 10th car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_g9_bmw_x5_4wd_3_0d.jpg" alt="BMW X5" />
+                    </td> 
+                    <td>
+                        <h2 class="title">BMW X5</h2>
+                        <p class="description">
+                            Color: metal grey <br />
+                            Year: 2009 <br />
+                            Country: Germany <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay10">$60 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days10" name="days" onchange="calculatePrice10()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price10">$0 for 0 days</div>
+                    </td>
+                </tr>
+                <!-- 11th car -->
+                <tr>
+                    <td class="img">
+                        <img class="cars" src="images/s_v9_mercedes_vito_2_2d.jpg" alt="Mercedes Vito" />
+                    </td> 
+                    <td>
+                        <h2 class="title">MERCEDES VITO</h2>
+                        <p class="description">
+                            Color: grey <br />
+                            Year: 2013 <br />
+                            Country: Germany <br />
+                        </p>
+                    </td>
+                    <td>
+                        <div>
+                            <h3 class="price" id="pricePerDay11">$60 per day <br /> (VAT excluded)</h3>
+                        </div>
+                        <div class="lastCol">
+                            <select id="days11" name="days" onchange="calculatePrice11()">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            &nbsp;days
+                        </div>
+                        <div class="lastCol" id="price11">$0 for 0 days</div>
+                    </td>
+                </tr>
+                
+                <!-- Total -->
+                <tr class="lastRow">
+                    <td></td>
+                    <td><h3>Subtotal (VAT excluded)</h3></td>
+                    <td><h3 id="subtotal">$0</h3></td>
+                </tr>
+                <tr class="lastRow">
+                    <td></td>
+                    <td><h3>Total + VAT (13%)</h3></td>
+                    <td><h3 id="total">$0</h3></td>
+                </tr>
+            </table>
+            <button onclick="calculateTotal()">Rent</button>
+        </div>
+        <footer>
+    	   <ul>
+                <li> Office hours<br> 7am - 9pm </li>
+                <li>Email<br>info@cyprusrentals.com </li>
+                <li>telephone<br>(+34) *** *** ***</li>
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="album/facebook.png" alt=""></a></li>
+                <li><a href="https://www.twitter.com/" target="_blank"><img src="album/twitter.png" alt=""></a></li>
+                <li><a href="https://www.googleplus.com/" target="_blank"><img src="album/google-plus.png" alt=""></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
